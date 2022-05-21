@@ -1,5 +1,5 @@
 # SCD_FinalPractice
-Created By: Carolina Nolasco &amp; Viktor Odriozola &amp; Telmo Martinez
+Created By: Carolina Nolasco &amp; Viktor Odriozola &amp; Telmo Martínez
 
 It contains: 
 - A zip file for each of the projects, three in total. 
