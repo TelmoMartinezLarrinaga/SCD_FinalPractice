@@ -1,0 +1,82 @@
+mysql -u root -p
+scd
+
+----- Use script from this point forward.
+
+create database PFinal;
+
+use PFinal;
+
+
+create table UsersNiza(userID int not null auto_increment, user text(20), password text(20), role int, primary key(userID));
+
+create table UsersCodina(userID int not null auto_increment, user text(20), password text(20), role int, primary key(userID));
+
+
+insert into UsersNiza values ('adminniza','adminniza',1);
+
+insert into UsersNiza values ('userniza','userniza',1);
+
+insert into UsersNiza values ('admincodina','admincodina',1);
+
+insert into UsersNiza values ('usercodina','usercodina',1);
+
+
+create table RoomsNiza(roomID int, availability int, userID int, primary key(roomID));
+
+alter table RoomsNiza add foreign key(userID) references UsersNiza (userID) on delete cascade on update cascade;
+
+create table RoomsCodina(roomID int, availability int, userID int, primary key(roomID));
+
+alter table RoomsCodina add foreign key(userID) references UsersCodina (userID) on delete cascade on update cascade;
+
+
+insert into RoomsNiza values (1,0,NULL);
+
+insert into RoomsNiza values (2,0,NULL);
+
+insert into RoomsNiza values (3,0,NULL);
+
+insert into RoomsNiza values (4,0,NULL);
+
+insert into RoomsNiza values (5,0,NULL);
+
+insert into RoomsNiza values (6,0,NULL);
+
+insert into RoomsNiza values (7,0,NULL);
+
+insert into RoomsNiza values (8,0,NULL);
+
+insert into RoomsNiza values (9,0,NULL);
+
+insert into RoomsNiza values (10,0,NULL);
+
+insert into RoomsCodina values (1,0,NULL);
+
+insert into RoomsCodina values (2,0,NULL);
+
+insert into RoomsCodina values (3,0,NULL);
+
+insert into RoomsCodina values (4,0,NULL);
+
+insert into RoomsCodina values (5,0,NULL);
+
+insert into RoomsCodina values (6,0,NULL);
+
+insert into RoomsCodina values (7,0,NULL);
+
+insert into RoomsCodina values (8,0,NULL);
+
+insert into RoomsCodina values (9,0,NULL);
+
+insert into RoomsCodina values (10,0,NULL);
+
+insert into RoomsCodina values (11,0,NULL);
+
+insert into RoomsCodina values (12,0,NULL);
+
+insert into RoomsCodina values (13,0,NULL);
+
+insert into RoomsCodina values (14,0,NULL);
+
+insert into RoomsCodina values (15,0,NULL);
